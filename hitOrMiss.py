@@ -1,14 +1,14 @@
 import random
 import math
 
-def exec(alpha, beta):
+def exec(alpha, beta, sobolSeq):
     hit = 0
     n = 0
     errorIsBig = True
+    seqIter = iter(sobolSeq)
     
     while errorIsBig:
-        x = random.random()
-        y = random.random()
+        x, y = next(seqIter)
         fx = math.exp(-alpha * x) * math.cos(beta * x)
             
         if y <= fx:

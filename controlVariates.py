@@ -1,16 +1,17 @@
 import math
 import random
 
-def exec(alpha, beta):
+def exec(alpha, beta, sobolSeq):
     sumDiff = 0
     sumDiff2 = 0
     n = 0
     errorIsBig = True
     sumVarGamma = 0
     integral = 0.77461  # integral conhecida de e^(-0.53454806*x) entre 0 e 1
+    seqIter = iter(sobolSeq)    
     
     while errorIsBig:
-        x = random.random()
+        x = next(seqIter)[0]
         fx = math.exp(-alpha * x) * math.cos(beta * x)
         px = math.exp(-alpha * x)
         

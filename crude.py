@@ -1,14 +1,15 @@
 import random
 import math
 
-def exec(alpha, beta):
+def exec(alpha, beta, sobolSeq):
     sumFx = 0
     sumFx2 = 0
     n = 0
     errorIsBig = True
-    
+    seqIter = iter(sobolSeq)
+
     while errorIsBig:
-        x = random.random()
+        x = next(seqIter)[0]
         fx = math.exp(-alpha * x) * math.cos(beta * x)
         
         sumFx += fx
