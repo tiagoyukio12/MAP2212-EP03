@@ -6,7 +6,6 @@ def exec(alpha, beta, sobolSeq):
     sumDiff2 = 0
     n = 0
     errorIsBig = True
-    sumVarGamma = 0
     integral = 0.77461  # integral conhecida de e^(-0.53454806*x) entre 0 e 1
     seqIter = iter(sobolSeq)    
     
