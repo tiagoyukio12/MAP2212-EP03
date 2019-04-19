@@ -20,6 +20,6 @@ def exec(alpha, beta, sobolSeq):
             estGamma = sumFx / n
             varGamma = (sumFx2 / n - (sumFx / n) ** 2) / (n - 1)
             relError = varGamma ** 0.5 / estGamma
-            errorIsBig = relError > 0.01 / 1.96
+            errorIsBig = relError > 0.01
     
     return (estGamma, n)

@@ -17,7 +17,7 @@ def exec(alpha, beta, sobolSeq):
         
         if n > 30:
             relError = (hit - hit ** 2/ n) ** 0.5 / hit
-            errorIsBig = relError > 0.01 / 1.96
+            errorIsBig = relError > 0.01
     
     estGamma = hit / n
     
