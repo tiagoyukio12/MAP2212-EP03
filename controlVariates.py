@@ -1,5 +1,4 @@
 import math
-import random
 
 def exec(alpha, beta, sobolSeq):
     sumDiff = 0

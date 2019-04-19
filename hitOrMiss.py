@@ -1,4 +1,3 @@
-import random
 import math
 
 def exec(alpha, beta, sobolSeq):
