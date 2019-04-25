@@ -21,10 +21,10 @@ def run(alpha, beta, betaSeq):
         n += 1
         
         # Criterio de parada
-        if n > 30:
+        if n > 100:
             estGamma = sumDiv / n
             varGamma = (sumDiv2 / n - (sumDiv / n) ** 2) / (n - 1)
             relError = varGamma ** 0.5 / estGamma
-            errorIsBig = relError > 0.01 / 1.96
+            errorIsBig = relError > 0.01
     
     return (estGamma, n)
