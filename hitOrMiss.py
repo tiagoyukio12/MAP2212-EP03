@@ -7,7 +7,7 @@ def run(alpha, beta, sobolSeq):
     seqIter = iter(sobolSeq)
     
     while errorIsBig:
-        x, y = next(seqIter)
+        x, y = next(seqIter)  # Utiliza as duas dimensoes da sequencia e itera para o prox.
         fx = math.exp(-alpha * x) * math.cos(beta * x)
             
         if y <= fx:

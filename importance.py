@@ -12,7 +12,7 @@ def run(alpha, beta, betaSeq):
     seqIter = iter(betaSeq)
     
     while errorIsBig:
-        x = next(seqIter)
+        x = next(seqIter)  # Utiliza a seq Sobol e itera para o prox.
         fx = math.exp(-alpha * x) * math.cos(beta * x)
         gx = betaDistr.pdf(x, a, b)
         
