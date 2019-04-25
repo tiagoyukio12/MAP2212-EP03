@@ -5,8 +5,6 @@ import hitOrMiss
 import importance
 import controlVariates
 
-import matplotlib.pyplot as plt
-
 # Parametros de f(x)
 alpha = 0.534548064
 beta = 0.9350011
@@ -18,7 +16,9 @@ name = ["CRUDE", "HIT OR MISS", "IMPORTANCE SAMPLING", "CONTROL VARIATES"]
 g = [0, 0, 0, 0]
 n = [0, 0, 0, 0]
 
+# Sequencia de Sobol uniforme em 2 dimensoes
 sobolSeq = sobol_seq.i4_sobol_generate(2, 25000)
+# Sequencia de Sobol com distribuicao Beta
 a = 1
 b = 1.5
 distribution = chaospy.Beta(a, b)
