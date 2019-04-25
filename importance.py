@@ -1,8 +1,7 @@
 import math
-import numpy
-from scipy.stats import beta as betaFunc
+from scipy.stats import beta as betaDistr
 
-def exec(alpha, beta):
+def run(alpha, beta, betaSeq):
     sumDiv = 0
     sumDiv2 = 0
     n = 0
@@ -10,10 +9,12 @@ def exec(alpha, beta):
     a = 1
     b = 1.5
     
+    seqIter = iter(betaSeq)
+    
     while errorIsBig:
-        x = numpy.random.beta(a, b)
+        x = next(seqIter)
         fx = math.exp(-alpha * x) * math.cos(beta * x)
-        gx = betaFunc.pdf(x, a, b)
+        gx = betaDistr.pdf(x, a, b)
         
         sumDiv += fx / gx
         sumDiv2 += (fx / gx) ** 2

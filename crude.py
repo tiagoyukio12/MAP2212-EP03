@@ -1,6 +1,6 @@
 import math
 
-def exec(alpha, beta, sobolSeq):
+def run(alpha, beta, sobolSeq):
     sumFx = 0
     sumFx2 = 0
     n = 0

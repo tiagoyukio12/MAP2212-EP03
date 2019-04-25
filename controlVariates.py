@@ -1,6 +1,6 @@
 import math
 
-def exec(alpha, beta, sobolSeq):
+def run(alpha, beta, sobolSeq):
     sumDiff = 0
     sumDiff2 = 0
     n = 0

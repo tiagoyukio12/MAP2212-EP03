@@ -1,6 +1,6 @@
 import math
 
-def exec(alpha, beta, sobolSeq):
+def run(alpha, beta, sobolSeq):
     hit = 0
     n = 0
     errorIsBig = True
